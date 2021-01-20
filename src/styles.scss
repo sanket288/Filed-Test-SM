@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'node_modules/angular2-toaster/toaster';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+  background: linear-gradient(to right,#2b5876, #4e4376);  
+  font-family: "Montserrat";
+}

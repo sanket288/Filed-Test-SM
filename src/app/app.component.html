@@ -1,0 +1,21 @@
+<layout name="{{ name }}"></layout>
+
+<button (click)="navigate()" class="payment-btn">Make Payment</button>
+<div class="card highlight-card  card-large">
+  <ul>
+    <p class="text-center">Card Details</p>
+    <li>Card Number: {{cardData.creditCardNumber ? cardData.creditCardNumber : '--'}}</li>
+    <li>Card Holder: {{cardData.cardHolder ? cardData.cardHolder : '--'}}</li>
+    <li>Expiry Date: {{cardData.expiryDate | date}}</li>
+    <li>CVV: {{cardData.securityCode ? cardData.securityCode : '--'}} </li>
+    <li>Amount: {{cardData.amount}}</li>
+  </ul>
+</div>
+
+<div class="view-container">
+  <toaster-container [toasterconfig]="toasterConfig"></toaster-container>
+
+  <router-outlet></router-outlet>
+
+  <div ng-view class="view-frame"></div>
+</div>
